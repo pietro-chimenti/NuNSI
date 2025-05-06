@@ -22,10 +22,6 @@ Requirements:
 To run:
 $ python nsi_survival_plot.py
 
-To cite:
-Please cite the original paper if this script or its results are used in scientific work:
-https://arxiv.org/abs/1901.04553
-
 """
 
 import numpy as np
@@ -39,17 +35,17 @@ me = 0.511  # positron mass in MeV
 delta = 1.29  # neutron-proton mass difference in MeV
 L_far = 1500  # far detector distance in meters
 L_near = 500  # near detector distance in meters
-Delta_m2_31 = 2.52e-3  # eV^2
+Delta_m2_31 = 2.52e-3  # eV^2 from arXiv:1811.05487
 theta13 = np.arcsin(np.sqrt(0.0841)) / 2  # convert sin^2(2θ13) to θ13 in radians
 
 # Energy range [MeV]
-E_nu = np.linspace(2, 8, 500)
+E_nu = np.linspace(1.8, 8, 1000)
 
 # NSI Parameters
-Re_S = 0.3
-Im_S = 0.3
-Re_T = 0.15
-Im_T = 0.15
+Re_S = 0.0
+Im_S = 0.0
+Re_T = 0.0
+Im_T = 0.0
 
 # f_T approximation using Gaussian reactor spectrum
 def f_T(E, mean=1.7, sigma=2.5):
